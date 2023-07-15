@@ -1,0 +1,20 @@
+.container {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #071013;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    font-size: 22px;
+    margin: 40px;
+    color: #BFC0C0;
+}
+
