@@ -8,7 +8,7 @@ const links = [
 
 const Footer = () => {
     return (
-        <div className={styles.container}>
+        <footer className={styles.container}>
             <div className={styles.copyright}>
                 @2023 Jeremy Ianne. All rights reserved.
             </div>
@@ -45,7 +45,7 @@ const Footer = () => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 
