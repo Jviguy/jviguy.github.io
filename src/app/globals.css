@@ -10,7 +10,6 @@ body {
   overflow-x: hidden;
   background-color: #090302;
   color: #bbb;
-  height: 100%
 }
 
 a {
@@ -19,7 +18,6 @@ a {
 }
 
 .container {
-  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

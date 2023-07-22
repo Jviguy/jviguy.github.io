@@ -13,6 +13,12 @@
   color: #BFC0C0;
 }
 
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 62px;
+  }
+}
+
 .info {
   font-size: 22px;
   color: #BFC0C0;

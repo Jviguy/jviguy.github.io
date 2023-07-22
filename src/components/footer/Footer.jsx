@@ -19,21 +19,31 @@ const Footer = () => {
                 ))}
             </div>
             <div className={styles.socials}>
-                <Link href="https://twitter.com/jviguy" rel="noopener noreferrer" target="_blank">
-                    <Image src="twitter.svg" width="25" height="25" alt=""/>
-                </Link>
-                <Link href="https://www.linkedin.com/in/jeremy-ianne-5a3621201/" rel="noopener noreferrer" target="_blank">
-                    <Image src="linked.svg" width="25" height="25" alt=""/>
-                </Link>
-                <Link href="https://www.instagram.com/jviguy06/" rel="noopener noreferrer" target="_blank">
-                    <Image src="insta.svg" width="25" height="25" alt=""/>
-                </Link>
-                <Link href="mailto:jviguytwo2@gmail.com" rel="noopener noreferrer" target="_blank">
-                    <Image src="gmail.svg" width="25" height="25" alt=""/>
-                </Link>
-                <Link href="https://github.com/Jviguy" rel="noopener noreferrer" target="_blank">
-                    <Image src="github.svg" width="25" height="25" alt=""/>
-                </Link>
+                <div className={styles.socialHolder}>
+                    <Link href="https://twitter.com/jviguy" rel="noopener noreferrer" target="_blank">
+                        <Image src="twitter.svg" fill={true} alt=""/>
+                    </Link>
+                </div>
+                <div className={styles.socialHolder}>
+                    <Link href="https://www.linkedin.com/in/jeremy-ianne-5a3621201/" rel="noopener noreferrer" target="_blank">
+                        <Image src="linked.svg" fill={true} alt=""/>
+                    </Link>
+                </div>
+                <div className={styles.socialHolder}>
+                    <Link href="https://www.instagram.com/jviguy06/" rel="noopener noreferrer" target="_blank">
+                        <Image src="insta.svg" fill={true} alt=""/>
+                    </Link>
+                </div>
+                <div className={styles.socialHolder}>
+                    <Link href="mailto:jviguytwo2@gmail.com" rel="noopener noreferrer" target="_blank">
+                        <Image src="gmail.svg" fill={true} alt=""/>
+                    </Link>
+                </div>
+                <div className={styles.socialHolder}>
+                    <Link href="https://github.com/Jviguy" rel="noopener noreferrer" target="_blank">
+                        <Image src="github.svg" fill={true} alt=""/>
+                    </Link>
+                </div>
             </div>
         </div>
     )
