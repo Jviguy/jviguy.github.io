@@ -6,29 +6,29 @@
     flex-direction: row;
     background-color: #071013;
     flex-shrink: 0;
+    padding: 30px;
+    gap: 30px;
 }
 
 .copyright {
     font-size: 16px;
     font-weight: bold;
-    margin-left: 30px;
 }
 
 .socials {
     display: flex;
     align-items: center;
-    margin: 40px;
     gap: 20px
 }
 
 .links {
     display: flex;
     align-items: center;
+    gap: 40px;
 }
 
 .link {
     font-size: 22px;
-    padding-right: 40px;
     color: #BFC0C0;
 }
 
@@ -38,23 +38,33 @@
     position: relative;
 }
 
+/**
+tablet sizes
+ */
 @media screen and (max-width: 1080px) and (min-width: 500px) {
     .copyright {
         font-size: 8px;
     }
+    .links {
+        gap: 20px;
+    }
 }
 
+/**
+phone sizes
+ */
 @media screen and (max-width: 500px) {
     .copyright {
         font-size: 7px;
     }
     .socials {
-        margin: 20px;
         gap: 10px
     }
     .link {
         font-size: 10px;
-        padding-right: 10px;
+    }
+    .links {
+        gap: 10px;
     }
     .socialHolder {
         width: 15px;
