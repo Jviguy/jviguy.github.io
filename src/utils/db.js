@@ -1,5 +1,9 @@
 import mongoose from "mongoose";
 
 const connect = async () => {
-    await mongoose.connect(process.env.MONGODB_URI)
+    try {
+        await mongoose.connect(process.env.MONGODB_URI)
+    } catch(err) {
+        throw new Error(process.env.MONGODB_URI)
+    }
 }
