@@ -35,7 +35,9 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
     },
-    'google-site-verification': "gUYUVb2H8vWS9FQlBUl-rVPTjzjgrlvwgFerNBi_nAo"
+    verification: {
+        google: "gUYUVb2H8vWS9FQlBUl-rVPTjzjgrlvwgFerNBi_nAo"
+    }
 }
 
 export default function RootLayout({ children }) {
