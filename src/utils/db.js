@@ -7,3 +7,5 @@ const connect = async () => {
         throw new Error(process.env.MONGODB_URI)
     }
 }
+
+export default connect;
