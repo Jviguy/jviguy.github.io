@@ -8,6 +8,6 @@ export const GET = async (req) => {
         const posts = await Post.find();
         return new NextResponse(posts, {status: 200});
     } catch (err) {
-        return new NextResponse("Database error", {status: 500});
+        return new NextResponse("Database error: " + err.toString(), {status: 500});
     }
 }
