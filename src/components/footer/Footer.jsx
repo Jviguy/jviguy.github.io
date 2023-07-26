@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const links = [
-    "About","Portfolio","Contact"
+    "Blog","Portfolio","Contact"
 ]
 
 const Footer = () => {
