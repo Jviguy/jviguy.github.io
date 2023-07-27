@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./navbar.module.css"
 
 const links = [
-    "Blog", "Portfolio", "Contact"
+    "Blog", "Portfolio", "Contact", "Login"
 ]
 
 
