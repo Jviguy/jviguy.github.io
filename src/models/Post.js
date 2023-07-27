@@ -19,5 +19,5 @@ const schema = new Schema({
     },
 },{timestamps: true});
 
-export default mongoose.model("Post", schema);
+export default mongoose.models.Post ||  mongoose.model("Post", schema);
 

@@ -18,6 +18,16 @@
     color: #BFC0C0;
 }
 
+.login {
+    font-size: 22px;
+    margin: 40px;
+    height: 50%;
+    background-color: #EC4E20;
+    border: 10px solid #EC4E20;
+    border-radius: 10%;
+    color: #BFC0C0;
+}
+
 @media screen and (max-width: 500px) {
     .container {
         height: 50px;

@@ -12,7 +12,7 @@ const Page = async ({params}) => {
 	return (
 		<div>
 			<h1>{data.title}</h1>
-			<Image src={data.image} alt=""></Image>
+			<Image src={data.image} width="500" height="500" alt=""></Image>
 			<p>{data.content}</p>
 		</div>
 	)
