@@ -3,6 +3,7 @@
 import Link from "next/link";
 import styles from "./navbar.module.css"
 import {useSession, signOut} from "next-auth/react";
+import {usePathname} from "next/navigation";
 
 const links = [
     "Blog", "Portfolio", "Contact"
@@ -11,6 +12,7 @@ const links = [
 
 const Navbar = () => {
     const {data,status} =  useSession()
+    const path = usePathname();
     return (
         <div className={styles.container}>
             <Link className={styles.link} href="/">🏠</Link>
@@ -19,7 +21,7 @@ const Navbar = () => {
                     <Link className={styles.link}  key={index} href={link.toLowerCase()}>{link}</Link>
                 ))}
                 { status === "unauthenticated" ?
-                    <Link href="/login" className={styles.login}>Sign In</Link> : <button className={styles.login} onClick={()=>signOut()}>Sign Out</button>
+                    <Link href={"/login?redirect="+path} className={styles.login}>Sign In</Link> : <button className={styles.login} onClick={()=>signOut()}>Sign Out</button>
                 }
             </div>
         </div>
