@@ -27,19 +27,39 @@
 
 .login {
     font-size: 22px;
-    padding: 10px;
+    padding: 5px;
     background-color: #EC4E20;
-    border: 2px solid #EC4E20;
-    border-radius: 10px;
+    border: 1px solid #EC4E20;
+    border-radius: 5px;
     color: #BFC0C0;
 }
 
 @media screen and (max-width: 500px) {
-    .container {
+    .links {
+        gap: 20px;
+    }
+    .link {
+        font-size: 12px;
+    }
+    .emoji {
+        font-size: 12px;
+    }
+    .login {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1284px) {
+    .links {
         height: 50px;
     }
     .link {
-        font-size: 15px;
-        margin: 20px;
+        font-size: 12px;
+    }
+    .emoji {
+        font-size: 12px;
+    }
+    .login {
+        font-size: 12px;
     }
 }

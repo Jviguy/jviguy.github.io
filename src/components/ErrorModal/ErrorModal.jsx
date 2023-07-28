@@ -1,4 +1,4 @@
-import styles from "./errormodal.module.css"
+import styles from "./ErrorModal.module.css"
 import Image from "next/image";
 
 export const ErrorModal = (props) => {
