@@ -1,12 +1,16 @@
 import connect from "@/utils/db";
-import Post from "@/models/Post";
 import {NextResponse} from "next/server";
+import User from "@/models/User";
+import {hash} from "bcrypt";
 
-export const GET = async (req) => {
+export const POST = async (req) => {
+    const {name, email, password} = await req.json();
+    const h = await hash(password, 10);
+    const newUser = new User({name, email, password: h});
     try {
         await connect();
-        const posts = await Post.find();
-        return new NextResponse(JSON.stringify(posts), {status: 200});
+        await newUser.save();
+        return new NextResponse("", {status: 201});
     } catch (err) {
         return new NextResponse("Database error: " + err.toString(), {status: 500});
     }

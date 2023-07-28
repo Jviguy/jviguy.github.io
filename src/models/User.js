@@ -15,10 +15,6 @@ const schema = new Schema({
         type: String,
         require: true,
     },
-    type: {
-        type: String,
-        required: true
-    },
 },{timestamps: true});
 
 export default mongoose.models.User || mongoose.model("User", schema);

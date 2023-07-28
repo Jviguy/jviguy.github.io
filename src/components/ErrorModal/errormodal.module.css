@@ -1,0 +1,37 @@
+.container {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #FB3640;
+    border: 10px solid #FB3640;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 2px 3px 5px #FC737A;
+    animation: popup 0.7s;
+}
+
+@keyframes popup {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.4);
+    }
+    60%{
+        transform: scale(1.1);
+    }
+    70%{
+        transform: scale(1.2);
+    }
+    80%{
+        transform: scale(1);
+    }
+    90%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

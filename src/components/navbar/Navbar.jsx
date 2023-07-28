@@ -21,7 +21,7 @@ const Navbar = () => {
                     <Link className={styles.link}  key={index} href={link.toLowerCase()}>{link}</Link>
                 ))}
                 { status === "unauthenticated" ?
-                    <Link href={"/login?redirect="+path} className={styles.login}>Sign In</Link> : <button className={styles.login} onClick={()=>signOut()}>Sign Out</button>
+                    <Link href={"/auth/login?redirect="+path} className={styles.login}>Sign In</Link> : <button className={styles.login} onClick={()=>signOut()}>Sign Out</button>
                 }
             </div>
         </div>
