@@ -14,7 +14,7 @@ const handler = NextAuth({
             async authorize(credentials) {
                 const {email, password} = credentials;
                 await connect();
-                const user = await User.findOne({email: email});
+                const user = await User.findOne({email: email.toLowerCase()});
                 if (!user) throw new Error("Incorrect email and or password.")
                 if (await compare(password, user.password)) return user;
                 else throw new Error("Incorrect email and or password.")
