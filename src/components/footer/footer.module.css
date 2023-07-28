@@ -70,4 +70,7 @@ phone sizes
         width: 15px;
         height: 15px;
     }
+    .container {
+        padding: 10px;
+    }
 }
