@@ -4,7 +4,6 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: #071013;
 }
 
 .links {
@@ -28,10 +27,9 @@
 .login {
     font-size: 22px;
     padding: 5px;
-    background-color: #EC4E20;
-    border: 1px solid #EC4E20;
+    background-color: #e19f96;
+    border: 1px solid #e19f96;
     border-radius: 5px;
-    color: #BFC0C0;
 }
 
 @media screen and (max-width: 500px) {
