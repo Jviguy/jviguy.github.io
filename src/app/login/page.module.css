@@ -14,19 +14,27 @@
 .input {
     padding: 20px;
     background-color: transparent;
-    border: 2px solid #bbbbbb;
+    border: 2px solid #e19f96;
+    color: #FFFFFF;
     border-radius: 5px;
     font-size: 20px;
+    font-family: inherit;
     font-weight: bold;
+}
+
+.input:focus {
+    outline: 0;
 }
 
 .button {
     font-size: 20px;
     font-weight: bold;
     border-radius: 10px;
-    background-color: #EC4E20;
-    border: 2px solid #EC4E20;
+    background-color: transparent;
+    border: 2px solid #e19f96;
     padding: 20px;
+    font-family: inherit;
+    color: #FFFFFF;
 }
 
 .button:hover {

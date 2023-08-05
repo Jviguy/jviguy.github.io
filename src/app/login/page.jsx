@@ -21,12 +21,12 @@ const Page = () => {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>
-                Login
+                Sign In
             </h1>
             <form className={styles.form} onSubmit={handleSubmit}>
                 <input type="email" placeholder="email" className={styles.input}></input>
                 <input type="password" placeholder="password" className={styles.input}></input>
-                <button className={styles.button} type="submit">Login</button>
+                <button className={styles.button} type="submit">Sign In</button>
             </form>
             <Link href={"/auth/register?redirect="+redir} className={styles.link}>Don&apos;t have an account?</Link>
             <div className={styles.socials}>

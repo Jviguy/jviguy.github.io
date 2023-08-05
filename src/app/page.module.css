@@ -39,6 +39,7 @@
   gap: 20px;
   justify-content: center;
 }
+
 .info {
   font-size: 22px;
 }
@@ -61,6 +62,18 @@
 @media screen and (max-width: 850px) {
   .title {
     font-size: 56px;
+  }
+  .center {
+    width: auto;
+  }
+  .centerItem {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .title {
+    font-size: 36px;
   }
   .center {
     width: auto;
