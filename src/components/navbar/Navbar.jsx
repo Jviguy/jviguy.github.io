@@ -19,7 +19,7 @@ const Navbar = () => {
             <Link className={styles.emoji} href="/">🏠</Link>
             <div className={styles.links}>
                 {links.map((link, index) => (
-                    <Link className={styles.link}  key={index} href={"/"+link.toLowerCase()}>{link}</Link>
+                    <Link className={styles.link}  key={index} href="#">{link}</Link>
                 ))}
                 <button className={styles.login}></button>
             </div>
@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link className={styles.emoji} href="/">🏠</Link>
             <div className={styles.links}>
                 {links.map((link, index) => (
-                    <Link className={styles.link}  key={index} href={link.toLowerCase()}>{link}</Link>
+                    <Link className={styles.link}  key={index} href={"/"+link.toLowerCase()}>{link}</Link>
                 ))}
                 { status === "unauthenticated" ?
                     <Link href={"/login?redirect="+path} className={styles.login}>Sign In</Link> : <button className={styles.login} onClick={()=>signOut()}>Sign Out</button>

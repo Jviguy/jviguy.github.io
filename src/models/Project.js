@@ -6,7 +6,7 @@ const schema = new Schema({
         unique: true,
         required: true,
     },
-    tile: {
+    title: {
         type: String,
         required: true,
     },

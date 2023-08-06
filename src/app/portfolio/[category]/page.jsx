@@ -17,6 +17,7 @@ const Page = async ({params}) => {
 				return (
 					<div key={project.title} className={styles.project}>
 						<h1 className={styles.title}>{project.title}</h1>
+						<p>{project.description}</p>
 					</div>
 				)
 			})}
