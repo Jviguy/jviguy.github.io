@@ -19,3 +19,22 @@
 .title {
 
 }
+
+@media screen and (max-width: 850px) {
+    .container {
+        flex-direction: column;
+    }
+    .categoryContainer {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .title {
+        font-size: 20px;
+        text-align: center;
+    }
+    .categoryContainer {
+        width: 200px;
+    }
+}

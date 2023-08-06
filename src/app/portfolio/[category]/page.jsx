@@ -3,7 +3,7 @@ import {NotFound} from "next/dist/client/components/error";
 import styles from "./page.module.css"
 
 async function retrieveProjects(category) {
-	const response = await fetch(`https://jviguy.vercel.app/api/projects/${category}`, { next: { revalidate: 10 } })
+	const response = await fetch(`https://jviguy.vercel.app/api/projects/${category}`, { next: { revalidate: 3600 } })
 	if (!response.ok) return NotFound();
 	return response.json();
 }
