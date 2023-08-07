@@ -2,21 +2,12 @@ import styles from "./footer.module.css"
 import Link from "next/link";
 import Image from "next/image";
 
-const links = [
-    "Blog","Portfolio","Contact"
-]
 
 const Footer = () => {
     return (
         <footer className={styles.container}>
             <div className={styles.copyright}>
                 @2023 Jeremy Ianne. All rights reserved.
-            </div>
-            <div className={styles.links}>
-                <Link className={styles.link} href="/">🏠</Link>
-                {links.map((link, index) => (
-                    <Link className={styles.link}  key={index} href={link.toLowerCase()}>{link}</Link>
-                ))}
             </div>
             <div className={styles.socials}>
                 <div className={styles.socialHolder}>

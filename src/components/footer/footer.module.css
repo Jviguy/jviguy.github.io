@@ -20,16 +20,6 @@
     gap: 20px
 }
 
-.links {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.link {
-    font-size: 22px;
-}
-
 .socialHolder {
     width: 25px;
     height: 25px;
@@ -43,9 +33,6 @@ tablet sizes
     .copyright {
         font-size: 8px;
     }
-    .links {
-        gap: 20px;
-    }
 }
 
 /**
@@ -57,12 +44,6 @@ phone sizes
     }
     .socials {
         gap: 10px
-    }
-    .link {
-        font-size: 10px;
-    }
-    .links {
-        gap: 10px;
     }
     .socialHolder {
         width: 15px;
