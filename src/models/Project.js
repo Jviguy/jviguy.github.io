@@ -21,6 +21,15 @@ const schema = new Schema({
         type: String,
         required: true
     },
+    github: {
+        type: String,
+    },
+    deployment: {
+        type: String,
+    },
+    article: {
+        type: String,
+    }
 },{timestamps: true});
 
 export default mongoose.models.Project || mongoose.model("Project", schema);
