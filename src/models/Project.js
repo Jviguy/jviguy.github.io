@@ -29,6 +29,9 @@ const schema = new Schema({
     },
     article: {
         type: String,
+    },
+    techs: {
+        type: [String],
     }
 },{timestamps: true});
 
