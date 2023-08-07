@@ -2,8 +2,9 @@ import React from 'react';
 import styles from './page.module.css';
 import {NotFound} from "next/dist/client/components/error";
 import Image from "next/image";
+
 async function retrieveBlogPost(id) {
-	const response = await fetch(`https://jviguy.vercel.app/api/posts/${id}`)
+	const response = await fetch(`https://jviguy.vercel.app/api/posts/${id}`, { next: { revalidate: 3600 } })
 	if (!response.ok) return NotFound();
 	return response.json();
 }
