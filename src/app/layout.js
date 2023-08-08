@@ -6,6 +6,7 @@ import {AuthProvider} from "@/components/AuthProvider/AuthProvider";
 
 const inter = Raleway({ subsets: ['latin'] })
 
+
 export const metadata = {
     title: {default:"Jeremy Ianne's portfolio"},
     description: 'My personal blog and portfolio detailing all my projects as well as my adventures in tech.',
@@ -42,17 +43,17 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <AuthProvider>
-          <div className="container">
-              <Navbar/>
-              {children}
-              <Footer/>
-          </div>
-        </AuthProvider>
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en">
+          <body className={inter.className}>
+            <AuthProvider>
+              <div className="container">
+                  <Navbar/>
+                  {children}
+                  <Footer/>
+              </div>
+            </AuthProvider>
+          </body>
+        </html>
+    )
 }

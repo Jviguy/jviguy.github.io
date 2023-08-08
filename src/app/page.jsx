@@ -10,7 +10,7 @@ export default function Home() {
           </h1>
           <div className={styles.center}>
               <div className={styles.titles}>
-                <h2>Cybersecurity Hobbyist and Software Engineer</h2>
+                <h2>Software Engineer and Cybersecurity Hobbyist</h2>
               </div>
               <div className={styles.centerItem}>
                   <p className={styles.info}>
@@ -23,7 +23,7 @@ export default function Home() {
                   </p>
                   <Image src="/me.jpg" alt="" width={200} height={200} className={styles.pfp}/>
               </div>
-              <Link href="portfolio" >
+              <Link href="portfolio">
                   <button className={styles.button}>
                       <h3 className={styles.info}>View My Works</h3>
                   </button>

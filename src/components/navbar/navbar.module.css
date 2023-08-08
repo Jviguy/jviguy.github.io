@@ -33,18 +33,21 @@
     text-align: center;
     height: 38px;
     width: 100px;
+    color: #FFFFFF;
+    font-family: inherit;
 }
 
+.loginHolder {
+    position: relative;
+    display: inline-block;
+}
 
 @media screen and (max-width: 1284px) {
     .links {
         height: 50px;
     }
-    .link {
-        font-size: 12px;
-    }
     .emoji {
-        font-size: 12px;
+        font-size: 14px;
     }
     .login {
         font-size: 12px;
@@ -54,6 +57,9 @@
 }
 
 @media screen and (max-width: 500px) {
+    .link {
+        font-size: 14px;
+    }
     .links {
         gap: 20px;
     }

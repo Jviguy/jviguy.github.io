@@ -45,21 +45,22 @@
 }
 
 .button {
-  padding: 20px;
+  padding: 20px 50px;
   cursor: pointer;
-  background-color: #8D8FAD;
+  background-color: #e19f96;
   font-size: 22px;
   border: none;
   border-radius: 10px;
   color: #FFFFFF;
+  font-family: inherit;
 }
 
 .pfp {
-  border-radius:50%;
+  border-radius: 50%;
 }
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .title {
     font-size: 56px;
   }
@@ -71,14 +72,14 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
   .title {
     font-size: 36px;
   }
   .center {
     width: auto;
   }
-  .centerItem {
-    flex-direction: column-reverse;
+  .button {
+    padding: 20px;
   }
 }

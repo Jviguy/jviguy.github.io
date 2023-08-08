@@ -7,24 +7,11 @@ import {usePathname} from "next/navigation";
 import {Suspense} from "react";
 
 const links = [
-    "Blog", "Portfolio", "Contact"
+    "Blog", "Portfolio", "Contact", "Dashboard"
 ]
 
 
 const Navbar = () => {
-    const {data,status} =  useSession()
-    const path = usePathname();
-    if (status === "loading") return (
-        <div className={styles.container}>
-            <Link className={styles.emoji} href="/">🏠</Link>
-            <div className={styles.links}>
-                {links.map((link, index) => (
-                    <Link className={styles.link}  key={index} href="#">{link}</Link>
-                ))}
-                <button className={styles.login}></button>
-            </div>
-        </div>
-        );
     return (
         <div className={styles.container}>
             <Link className={styles.emoji} href="/">🏠</Link>
@@ -32,9 +19,6 @@ const Navbar = () => {
                 {links.map((link, index) => (
                     <Link className={styles.link}  key={index} href={"/"+link.toLowerCase()}>{link}</Link>
                 ))}
-                { status === "unauthenticated" ?
-                    <Link href={"/login?redirect="+path} className={styles.login}>Sign In</Link> : <button className={styles.login} onClick={()=>signOut()}>Sign Out</button>
-                }
             </div>
         </div>
     )

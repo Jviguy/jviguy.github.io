@@ -27,20 +27,11 @@
 }
 
 /**
-tablet sizes
- */
-@media screen and (max-width: 1080px) and (min-width: 500px) {
-    .copyright {
-        font-size: 8px;
-    }
-}
-
-/**
 phone sizes
  */
 @media screen and (max-width: 500px) {
     .copyright {
-        font-size: 7px;
+        font-size: 10px;
     }
     .socials {
         gap: 10px

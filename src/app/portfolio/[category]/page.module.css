@@ -23,7 +23,7 @@
 .viewButton {
     padding: 20px 50px;
     cursor: pointer;
-    background-color: #8D8FAD;
+    background-color: #e19f96;
     font-size: 22px;
     border: none;
     border-radius: 10px;
@@ -38,7 +38,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .container {
         grid-template-columns: 1fr;
     }

@@ -1,0 +1,88 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: #9288AF solid 2px;
+    border-left: none;
+    padding: 20px;
+    align-items: flex-start;
+    gap: 40px;
+    transition: width 0.4s ease-in;
+}
+
+.containerClosed {
+    min-width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: #9288AF solid 2px;
+    border-left: none;
+    padding: 20px;
+    align-items: flex-start;
+    gap: 40px;
+    transition: 0.4s ease-in;
+}
+
+.header {
+    border-bottom: #9288AF solid 2px;
+    text-align: center;
+}
+
+.icoHolder {
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.entry {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-family: inherit;
+    text-align: center;
+    transition: 0.3s linear;
+}
+
+.bringbackcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry:hover {
+    transform: scale(1.2);
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    font-size: 16px;
+}
+
+.signOut {
+    background-color: #e19f96;
+    border: none;
+    padding: 10px 30px;
+    color: #FFFFFF;
+    font-family: inherit;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.texttransition {
+    font-size: 20px;
+    text-align: center;
+}
