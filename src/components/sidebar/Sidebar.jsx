@@ -13,14 +13,14 @@ export const Sidebar = () => {
         setOpen(!open);
     }
     return (
-        <div className={open?styles.container:styles.containerClosed}>
+        <div className={styles.container}>
             <button className={styles.entry} onClick={toggleMenu}>
                 <div className={styles.icoHolder}>
                     <Image src={`/icons/chevrons-${!open?"right":"left"}.svg`} alt="close" fill={true}></Image>
                 </div>
                 <CSSTransition
                     in={open}
-                    timeout={500}
+                    timeout={200}
                     classNames='fade'
                     unmountOnExit
                 >
@@ -33,9 +33,9 @@ export const Sidebar = () => {
                 </Link>
                 <CSSTransition
                     in={open}
-                    timeout={500}
-                    classNames='fade'
+                    timeout={200}
                     unmountOnExit
+                    classNames='fade'
                 >
                     <h4 className={styles.texttransition}>Handle Blog</h4>
                 </CSSTransition>
@@ -46,7 +46,7 @@ export const Sidebar = () => {
                 </Link>
                 <CSSTransition
                     in={open}
-                    timeout={500}
+                    timeout={200}
                     classNames='fade'
                     unmountOnExit
                 >
@@ -59,7 +59,7 @@ export const Sidebar = () => {
                 </div>
                 <CSSTransition
                     in={open}
-                    timeout={500}
+                    timeout={200}
                     classNames='fade'
                     unmountOnExit
                 >

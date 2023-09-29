@@ -7,20 +7,7 @@
     padding: 20px;
     align-items: flex-start;
     gap: 40px;
-    transition: width 0.4s ease-in;
-}
-
-.containerClosed {
-    min-width: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border: #9288AF solid 2px;
-    border-left: none;
-    padding: 20px;
-    align-items: flex-start;
-    gap: 40px;
-    transition: 0.4s ease-in;
+    transition: all 1s ease-out;
 }
 
 .header {
@@ -45,14 +32,6 @@
     color: #FFFFFF;
     font-family: inherit;
     text-align: center;
-    transition: 0.3s linear;
-}
-
-.bringbackcontainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .entry:hover {
@@ -83,6 +62,6 @@
 }
 
 .texttransition {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
 }

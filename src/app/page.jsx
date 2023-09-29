@@ -21,7 +21,7 @@ export default function Home() {
                       I have been employed at a Code Ninjas branch for around 2 years teaching the Unity Game Engine.
                       My most recent endeavour is interning at the Kashmir World Foundation.
                   </p>
-                  <Image src="/me.jpg" alt="" width={200} height={200} className={styles.pfp}/>
+                  <Image src="/me.jpg" alt="" width={400} height={400} className={styles.pfp}/>
               </div>
               <Link href="portfolio">
                   <button className={styles.button}>
