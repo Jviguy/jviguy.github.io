@@ -82,3 +82,9 @@
     padding: 20px;
   }
 }
+
+.imgContainer {
+  position: relative;
+  width: 683px;
+  height: 683px;
+}

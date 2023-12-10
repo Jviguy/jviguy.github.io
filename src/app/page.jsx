@@ -21,7 +21,9 @@ export default function Home() {
                       I have been employed at a Code Ninjas branch for around 2 years teaching the Unity Game Engine.
                       My most recent endeavour is interning at the Kashmir World Foundation.
                   </p>
-                  <Image src="/me.jpg" alt="" width={600} height={600} priority={true} objectFit={"cover"} unoptimized={true} className={styles.pfp}/>
+                  <div className={styles.imgContainer}>
+                    <Image src="/me.jpg" alt="" fill={true} priority={true}  unoptimized={true} className={styles.pfp}/>
+                  </div>
               </div>
               <Link href="portfolio">
                   <button className={styles.button}>
