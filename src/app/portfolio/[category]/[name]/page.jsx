@@ -12,6 +12,7 @@ async function retrieveProject(category, name) {
 
 const Page = async ({params}) => {
 	const project = await retrieveProject(params.category, params.name);
+	console.log(project);
 	if (React.isValidElement(project)) return project
 	return (
 		<div className={styles.container}>
@@ -24,6 +25,12 @@ const Page = async ({params}) => {
 					<div className={styles.techCardsHolder}>
 						{project.techs.map(tech=><h4 className={styles.techCard} key={tech}>{tech}</h4>)}
 					</div>
+					{project.video !== "" &&
+						<iframe width="560" height="315" src={project.video}
+										title="Demonstration" frameBorder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										allowFullScreen></iframe>
+					}
 				</div>
 
 				<div className={styles.colContainer}>

@@ -24,6 +24,9 @@ const schema = new Schema({
     github: {
         type: String,
     },
+    video: {
+        type: String,
+    },
     deployment: {
         type: String,
     },
