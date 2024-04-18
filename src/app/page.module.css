@@ -1,10 +1,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  margin: 50px;
+  margin: 20px;
 }
 
 
@@ -23,12 +23,11 @@
 .center {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+  border: #9288AF solid 1px;
   gap: 40px;
   padding: 20px;
-  width: 800px;
-  border: #9288AF solid 1px;
 }
 
 
@@ -44,10 +43,19 @@
   font-size: 22px;
 }
 
+.centerTextHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+}
+
 .button {
   padding: 20px 50px;
   cursor: pointer;
-  background-color: #e19f96;
+  background-color: #CF4420;
   font-size: 22px;
   border: none;
   border-radius: 10px;

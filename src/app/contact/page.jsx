@@ -18,9 +18,6 @@ const Page = () => (
               </Link>
             </div>
           </div>
-          <div>
-
-          </div>
         </div>
       <BackgroundBeams/>
     </div>
