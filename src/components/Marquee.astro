@@ -1,0 +1,46 @@
+---
+const items = [
+  "systems programming",
+  "protocol design",
+  "networking",
+  "rust",
+  "distributed",
+  "game servers",
+  "cryptography",
+  "reverse engineering",
+  "c++",
+  "golang",
+  "low-level",
+  "packet analysis",
+  "cloud infrastructure",
+  "clemson.cs",
+];
+
+// Duplicate the list so the marquee loops seamlessly
+const doubled = [...items, ...items];
+---
+
+<div class="relative overflow-hidden border-y border-border bg-bg-inset/80 py-4">
+  <div class="marquee-track flex w-max items-center gap-10 font-mono text-xs tracking-[0.2em] text-fg-dim uppercase">
+    {
+      doubled.map((item, i) => (
+        <span class="flex items-center gap-10 whitespace-nowrap">
+          <span class={i % 3 === 0 ? "text-rust" : "text-fg-muted"}>
+            {item}
+          </span>
+          <span class="text-fg-dimmer" aria-hidden="true">✦</span>
+        </span>
+      ))
+    }
+  </div>
+
+  {/* Edge fade */}
+  <div
+    class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-bg to-transparent"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-bg to-transparent"
+  >
+  </div>
+</div>

@@ -1,0 +1,86 @@
+---
+import Section from "./Section.astro";
+import { experience } from "../data/site";
+---
+
+<Section
+  module="02"
+  name="history"
+  title="Where I've built things in production."
+>
+  <div slot="sidebar" class="space-y-6">
+    <p class="font-mono text-[11px] leading-relaxed text-fg-dim">
+      <span class="text-fg-dimmer">$</span>{" "}
+      <span class="text-fg-muted">git log --since="3 years"</span>
+    </p>
+    <p class="text-sm leading-relaxed text-fg-muted">
+      A small but real track record — shipping to live users, making
+      architectural calls, and leading teams when the role has needed it.
+    </p>
+  </div>
+
+  <ol class="space-y-3">
+    {
+      experience.map((job, i) => {
+        const num = String(i).padStart(2, "0");
+        return (
+          <li class="group relative border border-border bg-bg-card/40 transition-colors hover:border-border-strong hover:bg-bg-card">
+            {/* Rust corner accent on hover */}
+            <span
+              class="absolute top-0 left-0 h-4 w-4 border-t border-l border-rust opacity-0 transition-opacity group-hover:opacity-100"
+            />
+            <span
+              class="absolute bottom-0 right-0 h-4 w-4 border-b border-r border-rust opacity-0 transition-opacity group-hover:opacity-100"
+            />
+
+            <div class="grid gap-6 p-6 sm:p-7 md:grid-cols-[auto_1fr] md:gap-10">
+              {/* Gutter: index + dates */}
+              <div class="flex flex-col gap-3 md:w-48">
+                <div
+                  class="flex items-baseline gap-3 font-display text-5xl italic leading-none text-rust"
+                >
+                  {num}
+                </div>
+                <div class="space-y-1 font-mono text-[11px] text-fg-dim">
+                  <div>{job.period}</div>
+                  <div class="text-fg-dimmer">{job.location}</div>
+                </div>
+              </div>
+
+              {/* Body */}
+              <div class="min-w-0">
+                <div class="mb-4">
+                  <h3 class="font-display text-2xl tracking-tight text-fg">
+                    {job.role}
+                  </h3>
+                  <p class="mt-0.5 font-mono text-sm tracking-wide text-rust-bright">
+                    @ {job.company}
+                  </p>
+                </div>
+
+                <ul class="space-y-3 text-fg-muted">
+                  {job.points.map((p) => (
+                    <li class="flex gap-3 leading-relaxed">
+                      <span class="mt-2 h-px w-3 shrink-0 bg-rust" aria-hidden="true" />
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {job.stack && (
+                  <div class="mt-5 flex flex-wrap gap-1.5">
+                    {job.stack.map((t) => (
+                      <span class="border border-border-strong bg-bg-inset px-2 py-1 font-mono text-[10px] tracking-wide text-fg-dim uppercase">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </li>
+        );
+      })
+    }
+  </ol>
+</Section>

@@ -1,0 +1,113 @@
+---
+import { site } from "../data/site";
+import { NetworkTopology } from "./NetworkTopology";
+import { BootSequence } from "./BootSequence";
+---
+
+<section class="relative overflow-hidden border-b border-border">
+  {/* Background: live network topology */}
+  <NetworkTopology client:load className="opacity-[0.55]" />
+
+  {/* Warm gradient wash over topology */}
+  <div
+    class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_120%,rgba(199,78,29,0.12),transparent_60%)]"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-6 pt-16 pb-24 sm:px-8 sm:pt-20 sm:pb-36">
+    <div class="grid gap-14 lg:grid-cols-12 lg:gap-10">
+      {/* Name + tagline */}
+      <div class="lg:col-span-8">
+        <h1 class="font-display text-[15vw] leading-[0.88] tracking-[-0.04em] text-fg sm:text-[10rem] lg:text-[11rem]">
+          <span class="block">Jeremy</span>
+          <span class="block italic text-rust">
+            Ianne<span class="text-ember">.</span>
+          </span>
+        </h1>
+
+        {/* Oxidation color strip */}
+        <div class="oxide-strip mt-10 h-[3px] w-full max-w-xl opacity-80"></div>
+
+        <p
+          class="mt-10 max-w-xl text-lg leading-relaxed text-fg-muted sm:text-xl"
+        >
+          I build <span class="text-fg">low-level systems</span>, game server
+          <span class="text-fg">netcode</span>, and
+          <span class="text-fg">protocols</span> that do not fall over under
+          load. Self-taught since around twelve, now a CS student at Clemson.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-3 font-mono text-xs">
+          <a
+            href="/projects"
+            class="group inline-flex items-center gap-3 border border-rust/60 bg-rust/10 px-5 py-3 uppercase tracking-[0.2em] text-rust-bright transition-all hover:border-rust hover:bg-rust/20 hover:shadow-[0_0_24px_-6px_var(--color-rust)]"
+          >
+            <span>view projects</span>
+            <span
+              class="transition-transform group-hover:translate-x-0.5"
+              aria-hidden="true">→</span
+            >
+          </a>
+          <a
+            href={site.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 border border-border-strong px-5 py-3 uppercase tracking-[0.2em] text-fg-muted transition-colors hover:border-fg-dim hover:text-fg"
+          >
+            <span>github</span>
+            <span aria-hidden="true" class="text-fg-dim">↗</span>
+          </a>
+          <a
+            href={site.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 border border-border-strong px-5 py-3 uppercase tracking-[0.2em] text-fg-muted transition-colors hover:border-fg-dim hover:text-fg"
+          >
+            <span>linkedin</span>
+            <span aria-hidden="true" class="text-fg-dim">↗</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Telemetry panel */}
+      <div class="lg:col-span-4">
+        <div
+          class="scanlines relative border border-border bg-bg-card/70 p-5 backdrop-blur-sm sm:p-6"
+        >
+          <div
+            class="mb-4 flex items-center justify-between border-b border-border pb-3 font-mono text-[10px] tracking-[0.25em] text-fg-dim uppercase"
+          >
+            <span>telemetry</span>
+            <span class="flex items-center gap-1.5">
+              <span class="h-1 w-1 rounded-full bg-ember"></span>
+              <span>live</span>
+            </span>
+          </div>
+
+          <BootSequence client:load />
+
+          <div
+            class="mt-6 space-y-2 border-t border-border pt-4 font-mono text-[11px] text-fg-muted"
+          >
+            <div class="flex justify-between">
+              <span class="text-fg-dim">os</span>
+              <span>arch · windows</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-fg-dim">shell</span>
+              <span>fish</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-fg-dim">editor</span>
+              <span>nvim</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-4 font-mono text-[10px] text-fg-dimmer tracking-wide">
+          fig.00 — runtime readout
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

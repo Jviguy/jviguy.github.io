@@ -1,0 +1,51 @@
+---
+interface Props {
+  id?: string;
+  module: string;
+  name: string;
+  title: string;
+  subtitle?: string;
+}
+
+const { id, module, name, title, subtitle } = Astro.props;
+---
+
+<section id={id} class="relative border-b border-border">
+  <div class="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-28">
+    {/* Section header */}
+    <header class="mb-14 grid gap-6 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-4">
+        <p
+          class="flex items-center gap-3 font-mono text-[10px] tracking-[0.3em] text-fg-dim uppercase"
+        >
+          <span class="text-rust">///</span>
+          <span>{module} — {name}</span>
+        </p>
+      </div>
+      <div class="lg:col-span-8">
+        <h2
+          class="font-display text-4xl leading-[1.05] tracking-[-0.02em] text-fg sm:text-5xl"
+        >
+          {title}
+        </h2>
+        {
+          subtitle && (
+            <p class="mt-4 max-w-xl text-fg-muted">
+              {subtitle}
+            </p>
+          )
+        }
+      </div>
+    </header>
+
+    {/* Content */}
+    <div class="grid gap-10 lg:grid-cols-12 lg:gap-10">
+      <div class="lg:col-span-4">
+        <slot name="sidebar" />
+      </div>
+      <div class="lg:col-span-8">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>

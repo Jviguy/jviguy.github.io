@@ -22,3 +22,12 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# claude code project settings (local only)
+.claude/
+
+# old Next.js portfolio — kept locally for reference, not deployed
+oldportfolio/
+
+# the resume pdf lives locally, don't publish it to the repo
+Jeremy Ianne Resume*.pdf

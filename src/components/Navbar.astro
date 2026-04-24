@@ -1,0 +1,50 @@
+---
+import { site } from "../data/site";
+
+const links = [
+  { label: "Index", href: "/" },
+  { label: "Projects", href: "/projects" },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-border bg-bg/75 backdrop-blur-xl">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5 sm:px-8">
+    <a
+      href="/"
+      class="font-display text-xl italic leading-none tracking-tight text-fg transition-colors hover:text-rust"
+      aria-label="Home"
+    >
+      jviguy<span class="text-rust">.</span>
+    </a>
+
+    <div class="flex items-center gap-5 font-mono text-[11px] uppercase tracking-[0.18em] sm:gap-7">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class="text-fg-muted transition-colors hover:text-fg"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+      <span class="hidden h-3 w-px bg-border sm:block"></span>
+      <a
+        href={site.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-fg-muted transition-colors hover:text-fg"
+      >
+        GH
+      </a>
+      <a
+        href={site.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-fg-muted transition-colors hover:text-fg"
+      >
+        LN
+      </a>
+    </div>
+  </nav>
+</header>

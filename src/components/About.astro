@@ -1,0 +1,118 @@
+---
+import Section from "./Section.astro";
+import { skills } from "../data/site";
+
+// Generate proficiency bars — not real numbers, just visual density per group
+const barFor = (n: number) => {
+  const filled = "█".repeat(n);
+  const empty = "░".repeat(12 - n);
+  return filled + empty;
+};
+
+const skillMeta: Record<string, { bar: number; note: string }> = {
+  Languages: { bar: 10, note: "daily driver" },
+  Networking: { bar: 9, note: "protocol work" },
+  "Cloud & DevOps": { bar: 7, note: "infra + pipelines" },
+  Interests: { bar: 11, note: "always reading" },
+};
+---
+
+<Section
+  module="01"
+  name="about"
+  title={`The work I'm drawn to lives close to the metal — where correctness compounds and sloppy abstractions cost you.`}
+>
+  <div slot="sidebar" class="space-y-6">
+    <div class="space-y-1 font-mono text-[11px] text-fg-dim">
+      <div class="text-fg-dimmer">subject</div>
+      <div class="text-fg">Jeremy Ianne</div>
+    </div>
+    <div class="space-y-1 font-mono text-[11px] text-fg-dim">
+      <div class="text-fg-dimmer">status</div>
+      <div class="text-fg">20 · b.eng cs</div>
+    </div>
+    <div class="space-y-1 font-mono text-[11px] text-fg-dim">
+      <div class="text-fg-dimmer">institution</div>
+      <div class="text-fg">clemson university</div>
+    </div>
+    <div class="space-y-1 font-mono text-[11px] text-fg-dim">
+      <div class="text-fg-dimmer">discipline</div>
+      <div class="text-fg">protocols · systems</div>
+    </div>
+  </div>
+
+  <div class="space-y-12">
+    {/* Bio prose */}
+    <div class="space-y-5 text-base leading-[1.75] text-fg-muted sm:text-[17px]">
+      <p>
+        I started writing code when I was around twelve, mostly teaching myself
+        out of curiosity about how things worked under the surface — how bytes
+        move on a wire, how a kernel actually schedules a thread, why a game
+        server stops tracking state the moment the network sneezes.
+      </p>
+      <p>
+        These days I split time between{" "}
+        <span class="font-medium text-rust">Rust</span>,{" "}
+        <span class="font-medium text-fg">C++</span>, and{" "}
+        <span class="font-medium text-fg">Go</span>, building emulators,
+        distributed systems, and network code. I also spent two years on a
+        cybersecurity and networking certificate (reverse engineering,
+        privilege escalation, cryptography) while I was still in high school —
+        it is the lens I bring to everything I build.
+      </p>
+      <p class="text-fg-dim">
+        I like problems that reward reading specs and thinking from first
+        principles. Tell me something is impossible and I will probably open a
+        debugger.
+      </p>
+    </div>
+
+    {/* Skills matrix */}
+    <div
+      class="border border-border bg-bg-card/50 p-5 font-mono text-[12px] sm:p-7"
+    >
+      <div
+        class="mb-5 flex items-center justify-between border-b border-border pb-3 text-[10px] tracking-[0.3em] text-fg-dim uppercase"
+      >
+        <span>skill · matrix</span>
+        <span class="text-fg-dimmer">n = {Object.keys(skills).length}</span>
+      </div>
+
+      <div class="space-y-6">
+        {
+          Object.entries(skills).map(([group, items]) => {
+            const meta = skillMeta[group] ?? { bar: 8, note: "" };
+            return (
+              <div>
+                <div class="mb-2 flex items-baseline justify-between gap-4">
+                  <span class="text-rust tracking-[0.05em] uppercase">
+                    {group}
+                  </span>
+                  <span class="hidden text-fg-dimmer text-[10px] sm:inline">
+                    {meta.note}
+                  </span>
+                </div>
+                <div class="mb-3 flex items-center gap-3">
+                  <span class="text-ember tracking-tighter leading-none">
+                    {barFor(meta.bar)}
+                  </span>
+                  <span class="text-fg-dimmer tabular-nums text-[10px]">
+                    {meta.bar}/12
+                  </span>
+                </div>
+                <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-fg-muted">
+                  {items.map((item, i) => (
+                    <span class="flex items-center gap-1.5">
+                      <span class="text-fg-dimmer">·</span>
+                      <span>{item}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</Section>
