@@ -92,7 +92,7 @@ export const NetworkTopology = memo(function NetworkTopology({
           );
         })}
 
-        {/* Node halo — pulsing */}
+        {/* Node halo, pulsing */}
         {nodes.map((n, i) => (
           <motion.circle
             key={`halo-${n.id}`}

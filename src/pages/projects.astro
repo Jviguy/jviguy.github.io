@@ -4,8 +4,8 @@ import { projects } from "../data/site";
 ---
 
 <Layout
-  title="Projects — Jeremy Ianne"
-  description="Projects by Jeremy Ianne — systems, networking, protocols."
+  title="Projects · Jeremy Ianne"
+  description="Projects by Jeremy Ianne. Systems, networking, protocols."
 >
   <section class="relative border-b border-border">
     <div class="mx-auto max-w-5xl px-6 py-20 sm:px-8 sm:py-28">
@@ -14,7 +14,7 @@ import { projects } from "../data/site";
       >
         <div class="flex items-center gap-3">
           <span class="text-rust">///</span>
-          <span>projects — index</span>
+          <span>projects · index</span>
         </div>
         <div>n = {projects.length}</div>
       </div>
@@ -131,7 +131,7 @@ import { projects } from "../data/site";
                   </div>
 
                   <div class="hidden font-mono text-[10px] tracking-[0.25em] text-fg-dimmer uppercase sm:block">
-                    {p.tech?.[0] ?? "—"}
+                    {p.tech?.[0] ?? "·"}
                   </div>
                 </Wrapper>
               </li>

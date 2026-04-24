@@ -27,7 +27,7 @@ export const experience: Experience[] = [
   {
     company: "D'Skills",
     role: "Cloud Solutions Architect (Contractor)",
-    period: "Mar 2024 — Present",
+    period: "Mar 2024 - Present",
     location: "Remote",
     points: [
       "Designed a Virtual Machine Infrastructure platform so students could reach AI tools otherwise blocked by school networks.",
@@ -37,7 +37,7 @@ export const experience: Experience[] = [
   {
     company: "Kashmir World Foundation",
     role: "Lead Backend / DevOps Engineer",
-    period: "Jun 2023 — Jun 2025",
+    period: "Jun 2023 - Jun 2025",
     location: "Remote",
     points: [
       "Led a team of 7-10 developers building an offline-first data collection app for wildlife researchers.",
@@ -49,7 +49,7 @@ export const experience: Experience[] = [
   {
     company: "Code Ninjas",
     role: "Code Sensei",
-    period: "Jan 2022 — Mar 2024",
+    period: "Jan 2022 - Mar 2024",
     location: "Tega Cay, SC",
     points: [
       "Taught students ages 5-15 from foundational programming through senior-level C# and Unity.",
@@ -71,19 +71,19 @@ export const education: Education[] = [
   {
     school: "Clemson University",
     degree: "B.E. Computer Science",
-    period: "2025 — 2028",
+    period: "2025 - 2028",
     location: "Clemson, SC",
   },
   {
     school: "Virginia Polytechnic State University",
     degree: "B.E. Computer Science",
-    period: "2024 — 2025",
+    period: "2024 - 2025",
     location: "Blacksburg, VA",
   },
   {
     school: "York Technical College",
     degree: "Cybersecurity & Networking Certificate",
-    period: "2022 — 2024",
+    period: "2022 - 2024",
     location: "Fort Mill, SC",
     note: "Completed as a Dual Enrollment student during high school.",
   },
@@ -100,7 +100,7 @@ export const projects: Project[] = [
   {
     title: "Axolotl Stack",
     description:
-      "Modular Minecraft Bedrock server stack in Rust — 500k+ lines across a set of crates: an async RakNet transport (tokio-raknet) and a newer WebRTC-based Nethernet transport (tokio-nethernet), a PrismarineJS-driven protocol code generator (valentine), the full protocol engine with encryption/compression/auth (jolyne), an Xbox Live auth library (axolotl-xbl), and the server implementation itself (unastar). Built Axelerator on top of it to fix a long-standing Bedrock limitation — consoles can't join non-featured servers — by running a local Nethernet session and advertising it as a friend session through the Xbox Live API, so anyone can join via the friends tab.",
+      "Modular Minecraft Bedrock server stack in Rust, 500k+ lines across a set of crates: an async RakNet transport (tokio-raknet) and a newer WebRTC-based Nethernet transport (tokio-nethernet), a PrismarineJS-driven protocol code generator (valentine), the full protocol engine with encryption/compression/auth (jolyne), an Xbox Live auth library (axolotl-xbl), and the server implementation itself (unastar). Built Axelerator on top of it to fix a long-standing Bedrock limitation (consoles can't join non-featured servers) by running a local Nethernet session and advertising it as a friend session through the Xbox Live API, so anyone can join via the friends tab.",
     url: "https://github.com/axolotl-stack/axolotl-stack",
     tech: ["Rust", "Tokio", "RakNet", "WebRTC", "Protocols", "Xbox Live"],
   },

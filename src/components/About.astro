@@ -2,7 +2,7 @@
 import Section from "./Section.astro";
 import { skills } from "../data/site";
 
-// Generate proficiency bars — not real numbers, just visual density per group
+// Generate proficiency bars (visual density per group, not real numbers)
 const barFor = (n: number) => {
   const filled = "█".repeat(n);
   const empty = "░".repeat(12 - n);
@@ -20,7 +20,7 @@ const skillMeta: Record<string, { bar: number; note: string }> = {
 <Section
   module="01"
   name="about"
-  title={`The work I'm drawn to lives close to the metal — where correctness compounds and sloppy abstractions cost you.`}
+  title={`The work I'm drawn to lives close to the metal, where correctness compounds and sloppy abstractions cost you.`}
 >
   <div slot="sidebar" class="space-y-6">
     <div class="space-y-1 font-mono text-[11px] text-fg-dim">
@@ -45,10 +45,11 @@ const skillMeta: Record<string, { bar: number; note: string }> = {
     {/* Bio prose */}
     <div class="space-y-5 text-base leading-[1.75] text-fg-muted sm:text-[17px]">
       <p>
-        I started writing code when I was around twelve, mostly teaching myself
-        out of curiosity about how things worked under the surface — how bytes
-        move on a wire, how a kernel actually schedules a thread, why a game
-        server stops tracking state the moment the network sneezes.
+        I started writing code when I was around twelve, modding the games I
+        played and running small servers for them. The deeper systems
+        questions (how bytes move on a wire, how a kernel actually schedules a
+        thread, why a game server stops tracking state the moment the network
+        sneezes) came a few years later.
       </p>
       <p>
         These days I split time between{" "}
@@ -57,8 +58,8 @@ const skillMeta: Record<string, { bar: number; note: string }> = {
         <span class="font-medium text-fg">Go</span>, building emulators,
         distributed systems, and network code. I also spent two years on a
         cybersecurity and networking certificate (reverse engineering,
-        privilege escalation, cryptography) while I was still in high school —
-        it is the lens I bring to everything I build.
+        privilege escalation, cryptography) while I was still in high school.
+        It is the lens I bring to everything I build.
       </p>
       <p class="text-fg-dim">
         I like problems that reward reading specs and thinking from first
